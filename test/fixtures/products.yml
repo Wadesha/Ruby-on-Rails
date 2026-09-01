@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 产品一
+  category: 分类一
+  price: 9.99
+  stock: 1
+  description: 描述一
+
+two:
+  name: 产品二
+  category: 分类二
+  price: 9.99
+  stock: 1
+  description: 描述二

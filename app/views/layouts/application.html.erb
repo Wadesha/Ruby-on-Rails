@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Info Management System" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Info Management System">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav style="background: #333; color: #fff; padding: 10px 20px; display: flex; gap: 20px; align-items: center;">
+      <h1 style="margin: 0; font-size: 18px; color: #fff;">信息管理系统</h1>
+      <%= link_to "首页", root_path, style: "color: #fff; text-decoration: none;" %>
+      <%= link_to "客户管理", customers_path, style: "color: #fff; text-decoration: none;" %>
+      <%= link_to "产品管理", products_path, style: "color: #fff; text-decoration: none;" %>
+      <%= link_to "订单管理", orders_path, style: "color: #fff; text-decoration: none;" %>
+    </nav>
+    <main style="padding: 20px; max-width: 1200px; margin: 0 auto;">
+      <p style="color: green; background: #d4edda; padding: 10px; border-radius: 4px;"><%= notice %></p>
+      <%= yield %>
+    </main>
+  </body>
+</html>
